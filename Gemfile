@@ -48,4 +48,4 @@ end
 
 # Added for authentication
 gem 'devise'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.4.1'
