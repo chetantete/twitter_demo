@@ -1,0 +1,31 @@
+<h1>Listing Users</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>follow / unfollow</th>
+	</tr>
+
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= user.email %></td>
+			<td>
+			  <button type="button" title="Follow" class="btn btn-primary btn-sm follow change-status" value="<%= user.email %>">Follow</button>
+
+			  <button type="button" title="Unfollow" class="btn btn-danger btn-sm unfollow change-status" value="<%= user.email %>">Unfollow</button>
+			 </td>
+
+		</tr>
+	<% end %>
+</table>
+
+<script type="text/javascript">
+	$(".change-status").click(function(){
+		// debugger
+	  email = $(this).val()
+    is_unfollow = $(this).hasClass("unfollow")
+	  console.log(email);
+	  console.log(is_unfollow);
+
+	});
+</script>
